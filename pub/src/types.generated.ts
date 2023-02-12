@@ -1,27 +1,49 @@
 import * as pt from 'pareto-core-types'
 
 
-export namespace GLocation {}
-export type GLocation = {
-    readonly 'column': number
-    readonly 'line': number
-}
-export type ULocation = GLocation
-
-export namespace GUntypedNode {
+export namespace T {
     
-    export namespace Pchildren {}
-    export type Pchildren = pt.Array<UUntypedNode>
+    export namespace Location {
+        
+        export type column = number
+        
+        export type line = number
+    }
     
-    export namespace Pdetails {}
-    export type Pdetails = {
-        readonly 'location': ULocation
+    export type Location = {
+        readonly 'column': number
+        readonly 'line': number
+    }
+    
+    export namespace UntypedNode {
+        
+        export namespace children {
+            
+            export type A = T.UntypedNode
+        }
+        
+        export type children = pt.Array<T.UntypedNode>
+        
+        export namespace details {
+            
+            export type location = T.Location
+        }
+        
+        export type details = {
+            readonly 'location': T.Location
+        }
+        
+        export type kindName = string
+        
+        export type value = string
+    }
+    
+    export type UntypedNode = {
+        readonly 'children': pt.Array<T.UntypedNode>
+        readonly 'details': {
+            readonly 'location': T.Location
+        }
+        readonly 'kindName': string
+        readonly 'value': string
     }
 }
-export type GUntypedNode = {
-    readonly 'children': GUntypedNode.Pchildren
-    readonly 'details': GUntypedNode.Pdetails
-    readonly 'kindName': string
-    readonly 'value': string
-}
-export type UUntypedNode = GUntypedNode

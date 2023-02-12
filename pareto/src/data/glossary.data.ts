@@ -8,30 +8,29 @@ import {
     member,
     reference,
     array,
+    type,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands.p"
 
 import * as mglossary from "lib-pareto-typescript-project/dist/submodules/glossary"
 
 const d = pr.wrapRawDictionary
 
-export const $: mglossary.TGlossary = {
+export const $: mglossary.T.Glossary<string> = {
     'imports': d({}),
     'parameters': d({}),
-    'templates': d({
-    }),
-    'types': types({
-        "Location": group({
+    'types': d({
+        "Location": type(group({
             "line": member(number()),
             "column": member(number()),
-        }),
-        "UntypedNode": group({
+        })),
+        "UntypedNode": type(group({
             "kindName": member(string()),
             "value": member(string()),
             "details": member(group({
                 "location": member(reference("Location")),
             })),
             "children": member(array(reference("UntypedNode")))
-        }),
+        })),
     }),
     'interfaces': d({}),
     'functions': d({}),
