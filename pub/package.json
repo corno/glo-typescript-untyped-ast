@@ -2,7 +2,6 @@
   "author": "Corno",
   "license": "ISC",
   "description": "glossary that contains the types for an untyped typescript abstract syntax tree",
-
   "dependencies": {
     "pareto-core-types": "^0.10.0"
   },
@@ -10,8 +9,12 @@
     "dist"
   ],
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "http://github.com/corno/glo-typescript-untyped-ast.git"
   },
   "main": "dist/index.js",
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "name": "glo-typescript-untyped-ast",
+  "version": "0.2.0",
+  "content-fingerprint": "8276afd02234027655c24851ecf1acd3bfec99b6"
 }
