@@ -19,6 +19,9 @@ export const $: mglossary.T.Glossary<string> = {
     'imports': d({}),
     'parameters': d({}),
     'types': d({
+        "Details": type(group({
+            "location": member(reference("Location")),
+        })),
         "Location": type(group({
             "line": member(number()),
             "column": member(number()),
@@ -26,9 +29,7 @@ export const $: mglossary.T.Glossary<string> = {
         "UntypedNode": type(group({
             "kindName": member(string()),
             "value": member(string()),
-            "details": member(group({
-                "location": member(reference("Location")),
-            })),
+            "details": member(reference("Details")),
             "children": member(array(reference("UntypedNode")))
         })),
     }),

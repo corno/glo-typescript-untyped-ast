@@ -3,6 +3,15 @@ import * as pt from 'pareto-core-types'
 
 export namespace T {
     
+    export namespace Details {
+        
+        export type location = T.Location
+    }
+    
+    export type Details = {
+        readonly 'location': T.Location
+    }
+    
     export namespace Location {
         
         export type column = number
@@ -24,14 +33,7 @@ export namespace T {
         
         export type children = pt.Array<T.UntypedNode>
         
-        export namespace details {
-            
-            export type location = T.Location
-        }
-        
-        export type details = {
-            readonly 'location': T.Location
-        }
+        export type details = T.Details
         
         export type kindName = string
         
@@ -40,9 +42,7 @@ export namespace T {
     
     export type UntypedNode = {
         readonly 'children': pt.Array<T.UntypedNode>
-        readonly 'details': {
-            readonly 'location': T.Location
-        }
+        readonly 'details': T.Details
         readonly 'kindName': string
         readonly 'value': string
     }
