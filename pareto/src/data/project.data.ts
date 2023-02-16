@@ -11,7 +11,7 @@ export const $: mproject.T.Project = {
     'description': "glossary that contains the types for an untyped typescript abstract syntax tree",
     'license': "ISC",
 
-    'pubdependencies': d({}),
+    'dependencies': d({}),
     'type': ['glossary', {
         'glossary': glossary
     }],
