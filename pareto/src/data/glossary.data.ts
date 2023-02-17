@@ -9,7 +9,7 @@ import {
     reference,
     array,
     type,
-} from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands.p"
+} from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
 
 import * as mglossary from "lib-pareto-typescript-project/dist/submodules/glossary"
 
