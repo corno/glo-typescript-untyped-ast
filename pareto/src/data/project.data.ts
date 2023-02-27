@@ -9,7 +9,7 @@ import { $ as glossary } from "./glossary.data"
 export const $: gproject.T.Project<pd.SourceLocation> = {
     'author': "Corno",
     'description': "glossary that contains the types for an untyped typescript abstract syntax tree",
-    'license': "ISC",
+    'license': "TBD",
 
     'dependencies': d({}),
     'type': ['glossary', {
