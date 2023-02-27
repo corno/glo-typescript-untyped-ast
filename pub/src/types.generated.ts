@@ -48,9 +48,7 @@ export namespace T {
             | ['string', string]
         >
         
-        export type kindName<GPAnnotation> = string
-        
-        export type value<GPAnnotation> = string
+        export type kind<GPAnnotation> = string
     }
     
     export type UntypedNode<GPAnnotation> = {
@@ -60,7 +58,6 @@ export namespace T {
             | ['number', number]
             | ['string', string]
         >
-        readonly 'kindName': string
-        readonly 'value': string
+        readonly 'kind': string
     }
 }

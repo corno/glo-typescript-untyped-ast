@@ -26,8 +26,7 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> = {
     }),
     'types': d({
         "UntypedNode": type(group({
-            "kindName": member(string()),
-            "value": member(string()),
+            "kind": member(string()),
             "annotation": member(glossaryParameter("Annotation")),
             "children": member(array(reference("UntypedNode"))),
             "flags": member(computed(dictionary(computed(taggedUnion({
