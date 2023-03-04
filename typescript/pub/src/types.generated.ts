@@ -5,14 +5,14 @@ export namespace T {
     
     export namespace UntypedNode {
         
-        export type annotation<GPAnnotation> = GPAnnotation
+        export type annotation<GAnnotation> = GAnnotation
         
         export namespace children {
             
-            export type A<GPAnnotation> = T.UntypedNode<GPAnnotation>
+            export type T<GAnnotation> = T.UntypedNode<GAnnotation>
         }
         
-        export type children<GPAnnotation> = pt.Array<T.UntypedNode<GPAnnotation>>
+        export type children<GAnnotation> = pt.Array<T.UntypedNode<GAnnotation>>
         
         export namespace flags {
             
@@ -22,38 +22,38 @@ export namespace T {
                     
                     export namespace C {
                         
-                        export type _lnumber<GPAnnotation> = number
+                        export type _lnumber<GAnnotation> = number
                         
-                        export type _lstring<GPAnnotation> = string
+                        export type _lstring<GAnnotation> = string
                     }
                     
-                    export type C<GPAnnotation> = 
+                    export type C<GAnnotation> = 
                         | ['number', number]
                         | ['string', string]
                 }
                 
-                export type D<GPAnnotation> = () => 
+                export type D<GAnnotation> = () => 
                     | ['number', number]
                     | ['string', string]
             }
             
-            export type C<GPAnnotation> = pt.Dictionary<() => 
+            export type C<GAnnotation> = pt.Dictionary<() => 
                 | ['number', number]
                 | ['string', string]
             >
         }
         
-        export type flags<GPAnnotation> = () => pt.Dictionary<() => 
+        export type flags<GAnnotation> = () => pt.Dictionary<() => 
             | ['number', number]
             | ['string', string]
         >
         
-        export type kind<GPAnnotation> = string
+        export type kind<GAnnotation> = string
     }
     
-    export type UntypedNode<GPAnnotation> = {
-        readonly 'annotation': GPAnnotation
-        readonly 'children': pt.Array<T.UntypedNode<GPAnnotation>>
+    export type UntypedNode<GAnnotation> = {
+        readonly 'annotation': GAnnotation
+        readonly 'children': pt.Array<T.UntypedNode<GAnnotation>>
         readonly 'flags': () => pt.Dictionary<() => 
             | ['number', number]
             | ['string', string]

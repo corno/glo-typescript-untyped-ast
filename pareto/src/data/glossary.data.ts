@@ -34,6 +34,7 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> = {
             })))))
         })),
     }),
+    'builders': d({}),
     'interfaces': d({}),
     'functions': d({}),
 }
