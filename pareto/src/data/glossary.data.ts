@@ -31,7 +31,7 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> = {
             "flags": member(computed(dictionary(computed(taggedUnion({
                 "string": string(),
                 "number": number(),
-            })))))
+            }))))),
         })),
     }),
     'builders': d({}),

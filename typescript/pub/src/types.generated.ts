@@ -9,7 +9,7 @@ export namespace T {
         
         export namespace children {
             
-            export type T<GAnnotation> = T.UntypedNode<GAnnotation>
+            export type A<GAnnotation> = T.UntypedNode<GAnnotation>
         }
         
         export type children<GAnnotation> = pt.Array<T.UntypedNode<GAnnotation>>
