@@ -6,35 +6,38 @@ import {
     types,
     group,
     member,
-    reference,
     array,
     type,
     glossaryParameter,
     computed,
     dictionary,
     taggedUnion,
+    ref,
+    typeReference,
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
 
-import * as gglossary from "lib-pareto-typescript-project/dist/submodules/glossary"
+import * as g_glossary from "lib-pareto-typescript-project/dist/submodules/glossary"
 
 const d = pd.d
 
-export const $: gglossary.T.Glossary<pd.SourceLocation> = {
+export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     'parameters': d({
         "Annotation": null,
     }),
+    'imports': d({}),
     'types': d({
         "UntypedNode": type(group({
             "kind": member(string()),
             "annotation": member(glossaryParameter("Annotation")),
-            "children": member(array(reference("UntypedNode"))),
+            "children": member(array(ref(typeReference("UntypedNode")))),
             "flags": member(computed(dictionary(computed(taggedUnion({
                 "string": string(),
                 "number": number(),
             }))))),
         })),
     }),
-    'builders': d({}),
-    'interfaces': d({}),
-    'functions': d({}),
+    'type': ['asynchronous', {
+        'interfaces': d({}),
+        'functions': d<g_glossary.T.Glossary._ltype.asynchronous.functions.D<pd.SourceLocation>>({}),
+    }],
 }
