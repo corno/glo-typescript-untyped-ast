@@ -1,19 +1,9 @@
 import * as pd from 'pareto-core-data'
 
 import {
-    string,
-    number,
-    types,
-    group,
-    member,
-    array,
-    type,
-    glossaryParameter,
-    computed,
-    dictionary,
-    taggedUnion,
-    ref,
-    typeReference,
+    array, computed,
+    dictionary, glossaryParameter, group,
+    member, number, ref, string, taggedUnion, type, typeReference
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
 
 import * as g_glossary from "lib-pareto-typescript-project/dist/submodules/glossary"
@@ -36,8 +26,12 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
             }))))),
         })),
     }),
-    'type': ['asynchronous', {
+    'asynchronous': {
         'interfaces': d({}),
-        'functions': d<g_glossary.T.Glossary._ltype.asynchronous.functions.D<pd.SourceLocation>>({}),
-    }],
+        'algorithms': d({}),
+    },
+    'synchronous': {
+        'interfaces': d({}),
+        'algorithms': d({}),
+    },
 }
