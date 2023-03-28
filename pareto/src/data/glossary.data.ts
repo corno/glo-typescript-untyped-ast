@@ -16,17 +16,20 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
         "Annotation": null,
     }),
     'imports': d({}),
-    'types': d({
-        "UntypedNode": type(group({
-            "kind": member(string()),
-            "annotation": member(ref(glossaryParameter("Annotation"))),
-            "children": member(array(ref(typeReference("UntypedNode")))),
-            "flags": member(computed(dictionary(computed(taggedUnion({
-                "string": string(),
-                "number": number(),
-            }))))),
-        })),
-    }),
+    'root': {
+        'namespaces': d({}),
+        'types': d({
+            "UntypedNode": type(group({
+                "kind": member(string()),
+                "annotation": member(ref(glossaryParameter("Annotation"))),
+                "children": member(array(ref(typeReference("UntypedNode")))),
+                "flags": member(computed(dictionary(computed(taggedUnion({
+                    "string": string(),
+                    "number": number(),
+                }))))),
+            })),
+        }),
+    },
     'asynchronous': {
         'interfaces': d({}),
         'algorithms': d({}),
