@@ -19,6 +19,8 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     'root': {
         'namespaces': d({}),
         'types': d({
+
+            //This is very very similar to an XML Element....
             "UntypedNode": type(group({
                 "kind": member(string()),
                 "annotation": member(ref(glossaryParameter("Annotation"))),
